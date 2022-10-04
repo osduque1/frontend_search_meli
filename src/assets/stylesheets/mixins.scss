@@ -1,0 +1,53 @@
+@import "variables";
+
+@mixin scrollbar {
+  overflow: auto;
+  scrollbar-color: $primary-500 transparent;
+  scrollbar-width: thin;
+
+  &::-webkit-scrollbar {
+    width: 10px;
+    height: 20px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $primary-500;
+    border-radius: 15px;
+  }
+
+  &::-webkit-scrollbar-thumb:hover {
+    background: $primary-700;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: transparent;
+  }
+}
+
+@mixin dynamic-height($flex-direction: row, $scroll: false) {
+  display: flex;
+  flex-direction: $flex-direction;
+  min-height: 0;
+
+  @if $scroll {
+    @include scrollbar;
+  }
+}
+
+@mixin svg {
+  animation-name: svg;
+  animation-duration: 1.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  @keyframes svg {
+    0% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}

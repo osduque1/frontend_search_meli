@@ -1,0 +1,101 @@
+@import "../../assets/stylesheets/reset.scss";
+@import "../../assets/stylesheets/mixins.scss";
+
+.Products {
+  align-items: center;
+  width: 100%;
+  height: 80vh;
+  @include dynamic-height(column, true);
+
+  &__List {
+    width: 70%;
+    background-color: $neutral-000;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+  }
+
+  &__ListItems {
+    display: flex;
+    align-items: center;
+    border-bottom: thin solid #eee;
+    margin: 0 16px;
+    padding: 16px 0;
+    cursor: pointer;
+
+    @media (max-width: $width-media-mobile) {
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    &--image {
+      border-radius: 4px;
+      height: 180px;
+      width: 180px;
+
+      @media (max-width: $width-media-mobile) {
+        height: 125px;
+        width: 140px;
+      }
+    }
+  }
+
+  &__ListItems:hover {
+    box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
+    transition: all 0.4s ease;
+    margin: 0;
+    padding: 10px;
+    border-radius: 5px;
+  }
+
+  &__Title {
+    display: flex;
+    flex-direction: column;
+    margin-left: 16px;
+    height: 75%;
+    width: 42%;
+
+    @media (max-width: $width-media-mobile) {
+      width: 100%;
+      margin: 15px 0 0;
+      align-items: center;
+    }
+
+    &--price {
+      display: flex;
+      margin-bottom: 32px;
+      font-size: 24px;
+
+      span {
+        font-size: 18px;
+        margin-left: 2px;
+      }
+    }
+
+    svg {
+      margin-left: 5px;
+      @include svg;
+    }
+
+    &--text {
+      font-size: 18px;
+      line-height: 25px;
+
+      @media (max-width: $width-media-mobile) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__Address {
+    font-size: 12px;
+    color: $gray-color-400;
+    height: 75px;
+    width: 25%;
+    text-align: end;
+
+    @media (max-width: $width-media-mobile) {
+      text-align: center;
+    }
+  }
+}

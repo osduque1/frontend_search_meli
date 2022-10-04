@@ -1,0 +1,49 @@
+@import "../../assets/stylesheets/reset.scss";
+
+.Header {
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  background-color: $yellow-neutral;
+  border-bottom: 1px solid $neutral-400;
+
+  &__Container {
+    display: flex;
+    height: $spacing-xxxl;
+    width: 70.5%;
+
+    img {
+      cursor: pointer;
+      margin-right: 10px;
+      margin-left: -8px;
+    }
+
+    input {
+      font-size: 18px;
+      margin-left: 0.5rem;
+      text-overflow: ellipsis;
+    }
+
+    input:focus {
+      box-shadow: none !important;
+    }
+  }
+
+  &__Search {
+    color: $neutral-700;
+    background-color: $neutral-100;
+    border: $border-transparent;
+    padding: $fs-button-small $fs-button-medium;
+    border: 1px solid #ced4da;
+  }
+
+  &__Search:hover {
+    color: $neutral-200;
+    background-color: $neutral-700;
+    border: 1px solid #ced4da;
+  }
+
+  &__Search:focus {
+    box-shadow: none;
+  }
+}

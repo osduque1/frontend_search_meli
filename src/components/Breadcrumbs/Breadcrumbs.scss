@@ -1,0 +1,18 @@
+@import "../../assets/stylesheets/mixins.scss";
+
+.Breadcrumbs {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  font-size: 14px;
+  color: $gray-color-200;
+  width: 71%;
+
+  li {
+    padding: 5px;
+  }
+
+  li:last-child {
+    font-weight: bold;
+  }
+}

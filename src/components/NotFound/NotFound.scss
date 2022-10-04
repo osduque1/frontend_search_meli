@@ -1,0 +1,24 @@
+@import '../../assets/stylesheets/reset.scss';
+
+.NotFound {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: $fs-h2;
+  width: $wh-eighty-percentage;
+  margin: $wh-three-percentage auto;
+
+  @media (max-width: $width-media-mobile) {
+    width: $wh-full-percentage;
+  }
+
+  &__Img {
+    width: $wh-fifty-percentage;
+    margin-bottom: $wh-one-percentage;
+  }
+
+  &__Home {
+    margin-top: $wh-one-percentage;
+    font-weight: bolder;
+  }
+}

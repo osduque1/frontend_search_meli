@@ -1,0 +1,32 @@
+@import '../../assets/stylesheets/mixins.scss';
+
+.Loader {
+  height: 80vh;
+  position: relative;
+
+  &__Container {
+    margin: 0;
+    position: absolute;
+    background-color: $neutral-000;
+    border: $border-divider;
+    border-radius: 20px;
+    padding: 10px 50px;
+    box-shadow: $shadow-xl;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    h5, p {
+      font-size: $fs-h5;
+      font-weight: bold;
+      margin: 30px;
+    }
+  }
+
+  &__Spinner {
+    width: 100px;
+    height: 100px;
+    border: 10px solid currentColor;
+    border-right-color: transparent;
+  }
+}
