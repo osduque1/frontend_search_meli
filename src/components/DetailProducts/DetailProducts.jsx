@@ -10,7 +10,7 @@ import "./DetailProducts.scss";
 import CardInfo from "../CardInfo/CardInfo";
 
 const DetailProducts = ({ productDetail, products }) => {
-  const { responseData, isLoading, isError, isSuccess } = productDetail;
+  const { responseData, isLoading, isError } = productDetail;
 
   const condition = responseData.item?.condition === "new" ? "Nuevo" : "Usado";
 
@@ -27,8 +27,8 @@ const DetailProducts = ({ productDetail, products }) => {
           <Loader />
         </Col>
       )}
-      {!isLoading && isError && <CardInfo error />}
-      {!isLoading && isSuccess && responseData.Code === '202' && <CardInfo/>}
+      {isError && <CardInfo error />}
+      {responseData.Code === '202' && <CardInfo/>}
       {!isLoading && !isError && (
         <>
           <Breadcrumbs data={products.responseData?.categories?.slice(0,5)} />

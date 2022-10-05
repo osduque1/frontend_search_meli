@@ -28,13 +28,13 @@ const Products = ({ products, getProductsDetail }) => {
           <Loader />
         </Col>
       )}
-      {!isLoading && isError && <CardInfo error />}
-      {!isLoading && isSuccess && responseData.Code === '202' && <CardInfo/>}
+      {isError && <CardInfo error />}
+      {isSuccess && responseData.Code === '202' && <CardInfo/>}
       {!isLoading && !isError && (
         <>
           <Breadcrumbs data={responseData?.categories?.slice(0,5)} />
           <ol className="Products__List">
-            {responseData?.items?.slice(0, 4).map((item, i) => (
+            {responseData?.items?.map((item, i) => (
               <li
                 key={i}
                 className="Products__ListItems"
