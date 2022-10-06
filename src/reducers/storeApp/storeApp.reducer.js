@@ -5,22 +5,22 @@ import {
   GET_PRODUCTS_FAILURE,
   GET_PRODUCTS_DETAIL_STARTED,
   GET_PRODUCTS_DETAIL_SUCCESS,
-  GET_PRODUCTS_DETAIL_FAILURE
-} from '../../constants/storeApp/storeApp.constant.js';
+  GET_PRODUCTS_DETAIL_FAILURE,
+} from "../../constants/storeApp/storeApp.constant.js";
 
 export const initialState = {
   products: {
     responseData: {},
     isLoading: false,
     isError: false,
-    isSuccess: false
+    isSuccess: false,
   },
   productDetail: {
     responseData: {},
     isLoading: false,
     isError: false,
-    isSuccess: false
-  }
+    isSuccess: false,
+  },
 };
 
 export default (state = initialState, { type, payload } = {}) => {
@@ -34,10 +34,13 @@ export default (state = initialState, { type, payload } = {}) => {
           ...localState.products,
           isLoading: true,
           isError: false,
-          isSuccess: false
-        }
+          isSuccess: false,
+        },
+        productDetail: {
+          isError: false,
+        },
       };
-      
+
     case GET_PRODUCTS_SUCCESS:
       return {
         ...localState,
@@ -45,8 +48,8 @@ export default (state = initialState, { type, payload } = {}) => {
           ...localState.products,
           responseData: payload,
           isLoading: false,
-          isSuccess: true
-        }
+          isSuccess: true,
+        },
       };
 
     case GET_PRODUCTS_FAILURE:
@@ -56,8 +59,8 @@ export default (state = initialState, { type, payload } = {}) => {
           ...localState.products,
           responseData: payload,
           isLoading: false,
-          isError: true
-        }
+          isError: true,
+        },
       };
 
     case GET_PRODUCTS_DETAIL_STARTED:
@@ -67,10 +70,10 @@ export default (state = initialState, { type, payload } = {}) => {
           ...localState.productDetail,
           isLoading: true,
           isError: false,
-          isSuccess: false
-        }
+          isSuccess: false,
+        },
       };
-      
+
     case GET_PRODUCTS_DETAIL_SUCCESS:
       return {
         ...localState,
@@ -78,8 +81,8 @@ export default (state = initialState, { type, payload } = {}) => {
           ...localState.productDetail,
           responseData: payload,
           isLoading: false,
-          isSuccess: true
-        }
+          isSuccess: true,
+        },
       };
 
     case GET_PRODUCTS_DETAIL_FAILURE:
@@ -89,8 +92,8 @@ export default (state = initialState, { type, payload } = {}) => {
           ...localState.productDetail,
           responseData: payload,
           isLoading: false,
-          isError: true
-        }
+          isError: true,
+        },
       };
 
     default:

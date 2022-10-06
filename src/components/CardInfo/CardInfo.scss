@@ -17,7 +17,7 @@
     box-shadow: $shadow-xl;
 
     &--icon {
-        @include svg;
+      @include svg;
     }
 
     h2 {

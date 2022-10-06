@@ -1,14 +1,14 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Spinner } from 'reactstrap';
-import './Loader.scss';
+import React from "react";
+import PropTypes from "prop-types";
+import { Spinner } from "reactstrap";
+import "./Loader.scss";
 
 const Loader = ({ title, description }) => {
   return (
-    <div className='Loader'>
-      <div className='Loader__Container'>
+    <div className="Loader">
+      <div className="Loader__Container">
         <h5>{title}</h5>
-        <Spinner color='primary' className='Loader__Spinner' />
+        <Spinner color="primary" className="Loader__Spinner" />
         <p>{description}</p>
       </div>
     </div>
@@ -16,8 +16,8 @@ const Loader = ({ title, description }) => {
 };
 
 Loader.defaultProps = {
-  title: '¡Cargando!',
-  description: 'Espera un momento',
+  title: "¡Cargando!",
+  description: "Espera un momento",
 };
 
 Loader.propTypes = {

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import { FcHighPriority, FcIdea } from "react-icons/fc";
 import "./CardInfo.scss";
 
-const CardInfo = ({error}) => {
+const CardInfo = ({ error }) => {
   return (
     <div className="CardInfo">
       <div className="CardInfo__Container">
@@ -25,7 +25,7 @@ const CardInfo = ({error}) => {
 };
 
 CardInfo.defaultProps = {
-  error: false
+  error: false,
 };
 
 CardInfo.propTypes = {

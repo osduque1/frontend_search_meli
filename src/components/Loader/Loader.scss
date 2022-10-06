@@ -1,4 +1,4 @@
-@import '../../assets/stylesheets/mixins.scss';
+@import "../../assets/stylesheets/mixins.scss";
 
 .Loader {
   height: 80vh;
@@ -16,7 +16,8 @@
     left: 50%;
     transform: translate(-50%, -50%);
 
-    h5, p {
+    h5,
+    p {
       font-size: $fs-h5;
       font-weight: bold;
       margin: 30px;
@@ -26,7 +27,7 @@
   &__Spinner {
     width: 100px;
     height: 100px;
-    color: $blue-ligth !important; 
+    color: $blue-ligth !important;
     border: 10px solid currentColor;
     border-right-color: transparent;
   }

@@ -1,4 +1,4 @@
-@import '../../assets/stylesheets/reset.scss';
+@import "../../assets/stylesheets/reset.scss";
 
 .NotFound {
   display: flex;
@@ -19,6 +19,17 @@
 
   &__Home {
     margin-top: $wh-one-percentage;
-    font-weight: bolder;
+    // padding: 10px 0px;
+    border-radius: 4px;
+    background-color: $blue-ligth;
+    border-color: $blue-ligth;
+    font-weight: bold;
+  }
+
+  &__Home:hover {
+    background: rgba(155, 28, 28, 0);
+    color: $blue-ligth;
+    border-color: $blue-ligth;
+    font-weight: bold;
   }
 }

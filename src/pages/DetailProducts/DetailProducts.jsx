@@ -3,22 +3,21 @@ import { Col, Row } from "reactstrap";
 import { connect } from "react-redux";
 import { RiReplyFill } from "react-icons/ri";
 import PropTypes from "prop-types";
-import { isEmpty } from 'lodash';
+import { isEmpty } from "lodash";
 import { formatValueToCurrency } from "../../utils/utils";
 import Loader from "../../components/Loader/Loader";
-import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
 import CardInfo from "../../components/CardInfo/CardInfo";
 import { useNavigate } from "react-router-dom";
 import "./DetailProducts.scss";
 
-const DetailProducts = ({ productDetail, products }) => {
+const DetailProducts = ({ productDetail }) => {
   const navigate = useNavigate();
   const { responseData, isLoading, isError } = productDetail;
-  const condition = responseData.item?.condition === "new" ? "Nuevo" : "Usado";
-  const decimals = String(responseData.item?.price?.decimals).substring(2);
+  const condition = responseData?.item?.condition === "new" ? "Nuevo" : "Usado";
+  const decimals = String(responseData?.item?.price?.decimals).substring(2);
 
   useEffect(() => {
-    if(isEmpty(responseData) && !isLoading) navigate('/');
+    if (isEmpty(responseData) && !isLoading) navigate("/");
   }, [responseData, navigate, isLoading]);
 
   const handleBuy = () => {
@@ -33,15 +32,11 @@ const DetailProducts = ({ productDetail, products }) => {
         </Col>
       )}
       {isError && <CardInfo error />}
-      {responseData.Code === '202' && <CardInfo/>}
+      {responseData?.Code === "202" && <CardInfo />}
       {!isLoading && !isError && (
         <>
-          <Breadcrumbs data={products.responseData?.categories?.slice(0,5)} />
           <Row sm={12} className="DetailProducts__Container">
-            <Col
-              sm={7}
-              className="DetailProducts__Item"
-            >
+            <Col sm={7} className="DetailProducts__Item">
               <div className="DetailProducts__Back" onClick={handleBuy}>
                 <RiReplyFill
                   size={35}
@@ -94,7 +89,6 @@ DetailProducts.propTypes = {
 
 const mapStateToProps = (state) => ({
   productDetail: state.storeApp.productDetail,
-  products: state.storeApp.products,
 });
 
 export default connect(mapStateToProps)(DetailProducts);
