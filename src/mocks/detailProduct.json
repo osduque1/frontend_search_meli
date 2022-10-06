@@ -1,0 +1,67 @@
+{
+    "author": {
+        "name": "Oscar",
+        "lastname": "Duque"
+    },
+    "categories": [
+        "Juegos de Mesa y Cartas",
+        "Muñecos y Muñecas",
+        "Peluches",
+        "Figuritas, Álbumes y Cromos",
+        "Hobbies"
+    ],
+    "items": [
+        {
+            "id": "MLA844892138",
+            "title": "Bolsa Conteniendo 24 Mini Pokémon 2-3 Cm Al Azar Sin Repetir",
+            "price": {
+                "currency": "ARS",
+                "amount": 3799.05,
+                "decimals": 0.05
+            },
+            "picture": "http://http2.mlstatic.com/D_863530-MLA50672955005_072022-I.jpg",
+            "condition": "new",
+            "free_shipping": false,
+            "address": "Vicente López"
+        },
+        {
+            "id": "MLA838504614",
+            "title": "Peluches Pokemon Go 20 Cm Varios Modelos Pikachu Pokemones",
+            "price": {
+                "currency": "ARS",
+                "amount": 1989,
+                "decimals": 0
+            },
+            "picture": "http://http2.mlstatic.com/D_668216-MLA48876225229_012022-I.jpg",
+            "condition": "new",
+            "free_shipping": false,
+            "address": "Microcentro"
+        },
+        {
+            "id": "MLA1125661247",
+            "title": "Figuras Set X8 Pokemon Go Pikachu. Coleccionables.",
+            "price": {
+                "currency": "ARS",
+                "amount": 5490,
+                "decimals": 0
+            },
+            "picture": "http://http2.mlstatic.com/D_656812-MLA51200753993_082022-I.jpg",
+            "condition": "new",
+            "free_shipping": false,
+            "address": "Villa Crespo"
+        },
+        {
+            "id": "MLA1129135841",
+            "title": "Peluche Muñeco Pokemon",
+            "price": {
+                "currency": "ARS",
+                "amount": 2699,
+                "decimals": 0
+            },
+            "picture": "http://http2.mlstatic.com/D_986475-MLA50732817710_072022-I.jpg",
+            "condition": "new",
+            "free_shipping": false,
+            "address": "Once"
+        }
+    ]
+}

@@ -7,6 +7,10 @@
   height: 80vh;
   @include dynamic-height(column, true);
 
+  @media (max-width: $width-media-mobile) {
+    height: 70vh;
+  }
+
   &__List {
     width: 71%;
     background-color: $neutral-000;

@@ -1,4 +1,4 @@
-import ReactDOM from "react-dom";
+import { createRoot } from "react-dom";
 // import AppProvider from "./containers/AppProvider/AppProvider";
 
 jest.mock("react-dom/client", () => ({
@@ -13,6 +13,6 @@ describe("Application root", () => {
     div.setAttribute("id", "root");
     document.body.appendChild(div);
     require("./index");
-    expect(ReactDOM.render).toHaveBeenCalled();
+    expect(createRoot.render).toHaveBeenCalled();
   });
 });

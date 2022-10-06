@@ -11,7 +11,7 @@
   &__Container {
     display: flex;
     height: $spacing-xxxl;
-    width: 70.5%;
+    width: 72.5%;
 
     @media (max-width: $width-media-mobile) {
       width: -webkit-fill-available;
@@ -20,7 +20,6 @@
     img {
       cursor: pointer;
       margin-right: 10px;
-      margin-left: -8px;
     }
 
     input {

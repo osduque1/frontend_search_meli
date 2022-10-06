@@ -1,10 +1,10 @@
 import React from "react";
 import { mount } from "enzyme";
-import AppProvider from "./AppProvider";
+import Breadcrumbs from "./Breadcrumbs";
 
-describe("Test for AppProvider", () => {
+describe("Test for Breadcrumbs", () => {
   test("should render without error", () => {
-    const wrappper = mount(<AppProvider />);
+    const wrappper = mount(<Breadcrumbs />);
 
     expect(wrappper.exists()).toBe(true);
   });
