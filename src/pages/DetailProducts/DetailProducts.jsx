@@ -5,11 +5,11 @@ import { RiReplyFill } from "react-icons/ri";
 import PropTypes from "prop-types";
 import { isEmpty } from 'lodash';
 import { formatValueToCurrency } from "../../utils/utils";
-import Loader from "../Loader/Loader";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import CardInfo from "../CardInfo/CardInfo";
-import "./DetailProducts.scss";
+import Loader from "../../components/Loader/Loader";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import CardInfo from "../../components/CardInfo/CardInfo";
 import { useNavigate } from "react-router-dom";
+import "./DetailProducts.scss";
 
 const DetailProducts = ({ productDetail, products }) => {
   const navigate = useNavigate();

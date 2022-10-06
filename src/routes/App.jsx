@@ -1,9 +1,9 @@
 import React from 'react';
 import { useRoutes } from 'react-router-dom';
 import Layout from '../containers/Layout/Layout';
-import NotFound from '../components/NotFound/NotFound';
-import Products from '../components/Products/Products';
-import DetailProducts from '../components/DetailProducts/DetailProducts';
+import NotFound from '../pages/NotFound/NotFound';
+import Products from '../pages/Products/Products';
+import DetailProducts from '../pages/DetailProducts/DetailProducts';
 
 export const ROUTES = [
   {

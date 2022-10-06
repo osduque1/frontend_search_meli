@@ -7,9 +7,9 @@ import { HiOutlineTruck } from "react-icons/hi";
 import { isEmpty } from 'lodash';
 import { formatValueToCurrency } from "../../utils/utils.js";
 import { getProductsDetail as getProductsDetailAction } from "../../actions/storeApp/storeApp.action";
-import Loader from "../Loader/Loader";
-import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import CardInfo from "../CardInfo/CardInfo";
+import Loader from "../../components/Loader/Loader";
+import Breadcrumbs from "../../components/Breadcrumbs/Breadcrumbs";
+import CardInfo from "../../components/CardInfo/CardInfo";
 import "./Products.scss";
 
 const Products = ({ products, getProductsDetail }) => {
