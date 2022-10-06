@@ -16,7 +16,7 @@
     padding: 25px 30px;
     box-shadow: $shadow-xl;
 
-    svg {
+    &--icon {
         @include svg;
     }
 

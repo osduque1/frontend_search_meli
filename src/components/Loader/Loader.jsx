@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './Loader.scss';
 import { Spinner } from 'reactstrap';
+import './Loader.scss';
 
 const Loader = ({ title, description }) => {
   return (

@@ -9,7 +9,7 @@ const CardInfo = ({error}) => {
       <div className="CardInfo__Container">
         {error ? (
           <>
-            <FcHighPriority size={100} />
+            <FcHighPriority className="CardInfo__Container--icon" size={100} />
             <h2>¡Se presentó un problema técnico!</h2>
           </>
         ) : (
@@ -18,7 +18,7 @@ const CardInfo = ({error}) => {
             <h2>¡No se encontraron coincidencias en su búsqueda!</h2>
           </>
         )}
-        <p>Por favor intenta nuevamente!</p>
+        <p>Por favor intenta nuevamente</p>
       </div>
     </div>
   );

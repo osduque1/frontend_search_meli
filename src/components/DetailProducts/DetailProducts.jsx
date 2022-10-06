@@ -1,20 +1,25 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Col, Row } from "reactstrap";
 import { connect } from "react-redux";
 import { RiReplyFill } from "react-icons/ri";
 import PropTypes from "prop-types";
+import { isEmpty } from 'lodash';
 import { formatValueToCurrency } from "../../utils/utils";
 import Loader from "../Loader/Loader";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import "./DetailProducts.scss";
 import CardInfo from "../CardInfo/CardInfo";
+import "./DetailProducts.scss";
+import { useNavigate } from "react-router-dom";
 
 const DetailProducts = ({ productDetail, products }) => {
+  const navigate = useNavigate();
   const { responseData, isLoading, isError } = productDetail;
-
   const condition = responseData.item?.condition === "new" ? "Nuevo" : "Usado";
-
   const decimals = String(responseData.item?.price?.decimals).substring(2);
+
+  useEffect(() => {
+    if(isEmpty(responseData) && !isLoading) navigate('/');
+  }, [responseData, navigate, isLoading]);
 
   const handleBuy = () => {
     window.history.back();
@@ -72,7 +77,7 @@ const DetailProducts = ({ productDetail, products }) => {
                 {formatValueToCurrency(responseData.item?.price.amount || 0)}
                 <span>{decimals}</span>
               </p>
-              <button className="DetailProducts__Button btn btn-primary">
+              <button className="DetailProducts__Buy btn btn-primary">
                 Comprar
               </button>
             </Col>

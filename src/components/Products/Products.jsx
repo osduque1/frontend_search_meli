@@ -1,25 +1,29 @@
-import React from "react";
+import React, { useEffect } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { Col, CardImg } from "reactstrap";
-import Loader from "../Loader/Loader";
-import { getProductsDetail as getProductsDetailAction } from "../../actions/storeApp/storeApp.action";
+import { HiOutlineTruck } from "react-icons/hi";
+import { isEmpty } from 'lodash';
 import { formatValueToCurrency } from "../../utils/utils.js";
+import { getProductsDetail as getProductsDetailAction } from "../../actions/storeApp/storeApp.action";
+import Loader from "../Loader/Loader";
 import Breadcrumbs from "../Breadcrumbs/Breadcrumbs";
-import { FcApproval } from "react-icons/fc";
-import "./Products.scss";
 import CardInfo from "../CardInfo/CardInfo";
+import "./Products.scss";
 
 const Products = ({ products, getProductsDetail }) => {
   const navigate = useNavigate();
   const { responseData, isLoading, isError, isSuccess } = products;
+  const decimals = (decimal) => String(decimal).substring(2);
+ 
+  useEffect(() => {
+    if(isEmpty(responseData) && !isLoading) navigate('/');
+  }, [responseData, navigate, isLoading]);
 
   const handleDetail = (idProduct) => {
     getProductsDetail(idProduct, navigate);
   };
-
-  const decimals = (decimal) => String(decimal).substring(2);
 
   return (
     <section className="Products">
@@ -29,10 +33,10 @@ const Products = ({ products, getProductsDetail }) => {
         </Col>
       )}
       {isError && <CardInfo error />}
-      {isSuccess && responseData.Code === '202' && <CardInfo/>}
+      {isSuccess && responseData.Code === "202" && <CardInfo />}
       {!isLoading && !isError && (
         <>
-          <Breadcrumbs data={responseData?.categories?.slice(0,5)} />
+          <Breadcrumbs data={responseData?.categories?.slice(0, 5)} />
           <ol className="Products__List">
             {responseData?.items?.map((item, i) => (
               <li
@@ -50,9 +54,10 @@ const Products = ({ products, getProductsDetail }) => {
                     {formatValueToCurrency(item?.price?.amount || 0)}
                     <span>{decimals(item?.price?.decimals)}</span>
                     {item?.free_shipping && (
-                      <FcApproval
-                        className="Products__Icon"
+                      <HiOutlineTruck
+                        className="Products__Title--icon"
                         title="Envio Gratis"
+                        size={18}
                       />
                     )}
                   </p>

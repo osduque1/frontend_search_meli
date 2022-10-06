@@ -50,6 +50,10 @@
     strong {
       margin-top: 5px;
     }
+
+    &--btn {
+      color: $blue-ligth !important;
+    }
   }
 
   &__Description {
@@ -70,6 +74,7 @@
     p {
       font-size: 16px;
       line-height: 23px;
+      color: $gray-color-200;
     }
   }
 
@@ -115,18 +120,18 @@
     }
   }
 
-  &__Button {
+  &__Buy {
     padding: 10px 0px;
     border-radius: 4px;
-    background-color: $button-color;
-    border-color: $button-color;
+    background-color: $blue-ligth;
+    border-color: $blue-ligth;
     font-weight: bold;
   }
 
-  &__Button:hover {
+  &__Buy:hover {
     background: rgba(155, 28, 28, 0);
-    color: $button-color;
-    border-color: $button-color;
+    color: $blue-ligth;
+    border-color: $blue-ligth;
     font-weight: bold;
   }
 }
