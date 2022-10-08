@@ -1,4 +1,4 @@
-@import "../../assets/stylesheets/reset.scss";
+@import "../../assets/stylesheets/variables";
 
 .NotFound {
   display: flex;
@@ -19,7 +19,6 @@
 
   &__Home {
     margin-top: $wh-one-percentage;
-    // padding: 10px 0px;
     border-radius: 4px;
     background-color: $blue-ligth;
     border-color: $blue-ligth;

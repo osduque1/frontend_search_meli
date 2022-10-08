@@ -1,11 +1,10 @@
-@import "../../assets/stylesheets/reset.scss";
 @import "../../assets/stylesheets/mixins.scss";
 
 .DetailProducts {
   @include dynamic-height(column, true);
   align-items: center;
   width: 100%;
-  height: 86vh;
+  height: 72vh;
 
   &__Container {
     display: flex;
@@ -22,7 +21,7 @@
 
     &--image {
       height: 430px;
-      width: 310px;
+      width: 380px;
 
       @media (max-width: $width-media-mobile) {
         height: 100%;
@@ -38,8 +37,8 @@
 
     @media (max-width: $width-media-mobile) {
       padding: 10px 0 0 0;
-      width: 100%;
-      height: 27%;
+      width: 65%;
+      align-self: center;
     }
   }
 
@@ -61,12 +60,12 @@
   &__Description {
     display: flex;
     flex-direction: column;
-    margin: 32px;
+    padding: 42px 0 32px 32px;
     width: 610px;
 
     @media (max-width: $width-media-mobile) {
       width: auto;
-      padding: 15px;
+      padding: 35px;
       margin: 0;
     }
 
@@ -117,6 +116,8 @@
 
       @media (max-width: $width-media-mobile) {
         text-align: center;
+        line-height: 24px;
+        font-size: 22px;
       }
     }
 
@@ -128,6 +129,8 @@
       @media (max-width: $width-media-mobile) {
         font-size: 28px;
         justify-content: center;
+        margin: 15px 0;
+        font-weight: bold;
       }
 
       span {

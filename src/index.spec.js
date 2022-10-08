@@ -1,18 +1,11 @@
-import { createRoot } from "react-dom";
-// import AppProvider from "./containers/AppProvider/AppProvider";
+import index from "./index";
 
-jest.mock("react-dom/client", () => ({
-  createRoot: jest.fn().mockImplementation(() => ({
-    render: jest.fn(),
-  })),
-}));
-
-describe("Application root", () => {
-  it("should render without crashing", () => {
-    const div = document.createElement("div");
-    div.setAttribute("id", "root");
-    document.body.appendChild(div);
-    require("./index");
-    expect(createRoot.render).toHaveBeenCalled();
+describe("Test index.js", () => {
+  it("Should render app without crashing", () => {
+    expect(
+      JSON.stringify(
+        Object.assign({}, index, { _reactInternalInstance: "censored" })
+      )
+    ).toMatchSnapshot();
   });
 });

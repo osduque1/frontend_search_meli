@@ -1,7 +1,7 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
+import { createRoot } from "react-dom/client";
 import AppProvider from "./containers/AppProvider/AppProvider";
-import reportWebVitals from "./reportWebVitals";
+import "../src/assets/stylesheets/reset.scss";
 
 /* istanbul ignore next */
 if (process.env.NODE_ENV === "production") {
@@ -18,6 +18,6 @@ if (process.env.NODE_ENV === "production") {
   );
 }
 
-ReactDOM.createRoot(document.getElementById("root")).render(<AppProvider />);
-
-reportWebVitals();
+createRoot(
+  document.getElementById("root") || document.createElement("div")
+).render(<AppProvider />);

@@ -1,15 +1,10 @@
-@import "../../assets/stylesheets/reset.scss";
 @import "../../assets/stylesheets/mixins.scss";
 
 .Products {
+  @include dynamic-height(column, true);
   align-items: center;
   width: 100%;
-  height: 80vh;
-  @include dynamic-height(column, true);
-
-  @media (max-width: $width-media-mobile) {
-    height: 70vh;
-  }
+  height: 72vh;
 
   &__List {
     width: 71%;
@@ -17,7 +12,7 @@
     display: flex;
     flex-direction: column;
     border-radius: 5px;
-    margin: 2px 0 0 10px;
+    margin: 2px 0 7px 10px;
   }
 
   &__ListItems {
@@ -37,18 +32,12 @@
       border-radius: 4px;
       height: 180px;
       width: 180px;
-
-      @media (max-width: $width-media-mobile) {
-        height: 125px;
-        width: 140px;
-      }
     }
   }
 
   &__ListItems:hover {
     box-shadow: 0 4px 16px rgba(49, 138, 172, 1);
     transition: all 0.4s ease;
-    margin: 0;
     padding: 10px;
     border-radius: 5px;
   }
@@ -70,6 +59,11 @@
       display: flex;
       margin-bottom: 32px;
       font-size: 24px;
+
+      @media (max-width: $width-media-mobile) {
+        margin-bottom: 10px;
+        font-weight: bold;
+      }
 
       span {
         font-size: 16px;
@@ -104,6 +98,7 @@
 
     @media (max-width: $width-media-mobile) {
       text-align: center;
+      font-size: 15px;
     }
   }
 }

@@ -14,26 +14,24 @@ export const getProducts = (searchText, navigate) => (dispatch) => {
   const urlProducts = searchText?.length ? `/items?search=${searchText}` : "";
   navigate(urlProducts);
 
-  if (searchText !== "") {
-    dispatch({
-      type: GET_PRODUCTS_STARTED,
-    });
+  dispatch({
+    type: GET_PRODUCTS_STARTED,
+  });
 
-    axios
-      .get(`${endPoint}${searchText}`)
-      .then((response) => {
-        dispatch({
-          type: GET_PRODUCTS_SUCCESS,
-          payload: response.data,
-        });
-      })
-      .catch((err) => {
-        dispatch({
-          type: GET_PRODUCTS_FAILURE,
-          payload: err,
-        });
+  axios
+    .get(`${endPoint}${searchText}`)
+    .then((response) => {
+      dispatch({
+        type: GET_PRODUCTS_SUCCESS,
+        payload: response.data,
       });
-  }
+    })
+    .catch((err) => {
+      dispatch({
+        type: GET_PRODUCTS_FAILURE,
+        payload: err,
+      });
+    });
 };
 
 export const getProductsDetail = (idProduct, navigate) => (dispatch) => {
