@@ -6,13 +6,21 @@
   width: 100%;
   height: 72vh;
 
+  @media (max-width: $width-media-mobile) {
+    height: auto;
+  }
+
   &__List {
+    display: flex;
     width: 71%;
     background-color: $neutral-000;
-    display: flex;
     flex-direction: column;
     border-radius: 5px;
     margin: 2px 0 7px 10px;
+
+    @media (max-width: $width-media-mobile) {
+      width: auto;
+    }
   }
 
   &__ListItems {
@@ -30,8 +38,8 @@
 
     &--image {
       border-radius: 4px;
-      height: 180px;
-      width: 180px;
+      height: 200px;
+      width: 220px;
     }
   }
 
