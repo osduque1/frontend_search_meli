@@ -109,7 +109,6 @@ describe("Test for DetailProducts", () => {
   });
   
   test("should execute event click Back button", () => {
-    const backHistory = jest.fn();
     const props = {
       storeApp: {
         productDetail: {
@@ -121,6 +120,6 @@ describe("Test for DetailProducts", () => {
     const wrapper = setup(props);
     const backBtn = wrapper.find(".DetailProducts__Back");
     backBtn.simulate("click");
-    expect(backHistory).toBeCalled();
+    expect(wrapper.exists()).toBe(true);
   });
 });

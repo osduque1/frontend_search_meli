@@ -26,4 +26,11 @@ describe("Test for NotFound", () => {
     const wrapper = setup();
     expect(wrapper.exists()).toBe(true);
   });
+
+  test("should execute go to Home button", () => {
+    const wrapper = setup();
+    const goToHome = wrapper.find(".NotFound__Home");
+    goToHome.simulate("click");
+    expect(wrapper.exists()).toBe(true);
+  });
 });

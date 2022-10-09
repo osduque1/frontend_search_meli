@@ -24,7 +24,7 @@ export const initialState = {
 };
 
 export default (state = initialState, { type, payload } = {}) => {
-  const localState = state || initialState;
+  const localState = state;
 
   switch (type) {
     case GET_PRODUCTS_STARTED:

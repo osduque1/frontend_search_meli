@@ -4,14 +4,29 @@ import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
 import { Provider } from "react-redux";
 import { MemoryRouter } from "react-router-dom";
+import product from "../../mocks/products.json";
 import Layout from "./Layout";
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);
 
-const store = mockStore();
+const defaultProps = {
+  storeApp: {
+    products: {
+      responseData: product,
+      isLoading: false,
+      isError: false,
+    },
+    productDetail: {
+      isLoading: false,
+      isError: false,
+    },
+  },
+};
+
 const setup = (props = {}) => {
-  const setupProps = { ...props };
+  const setupProps = { ...defaultProps, ...props };
+  const store = mockStore(setupProps);
   return mount(
     <Provider store={store}>
       <MemoryRouter>

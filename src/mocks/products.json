@@ -16,12 +16,12 @@
             "title": "Bolsa Conteniendo 24 Mini Pokémon 2-3 Cm Al Azar Sin Repetir",
             "price": {
                 "currency": "ARS",
-                "amount": 3799.05,
+                "amount": null,
                 "decimals": 0.05
             },
             "picture": "http://http2.mlstatic.com/D_863530-MLA50672955005_072022-I.jpg",
             "condition": "new",
-            "free_shipping": false,
+            "free_shipping": true,
             "address": "Vicente López"
         },
         {

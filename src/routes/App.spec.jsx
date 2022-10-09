@@ -1,29 +1,44 @@
 import React from "react";
-import { BrowserRouter } from "react-router-dom";
-import { shallow } from "enzyme";
+import { mount } from "enzyme";
+import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
+import { Provider } from "react-redux";
+import { MemoryRouter } from "react-router-dom";
+import product from "../mocks/products.json";
 import App from "./App";
 
-const initialState = {
-  products: {
-    responseData: "",
-    isLoading: false,
-    isError: false,
+const middlewares = [thunk];
+const mockStore = configureStore(middlewares);
+
+const defaultProps = {
+  storeApp: {
+    products: {
+      responseData: product,
+      isLoading: false,
+      isError: false,
+    },
+    productDetail: {
+      isLoading: false,
+      isError: false,
+    },
   },
 };
 
-const setupComponent = (Component, props = {}) => (
-  <Component {...props}>
-    <div />
-  </Component>
-);
+const setup = (props = {}) => {
+  const setupProps = { ...defaultProps, ...props };
+  const store = mockStore(setupProps);
+  return mount(
+    <Provider store={store}>
+      <MemoryRouter>
+        <App {...setupProps} />
+      </MemoryRouter>
+    </Provider>
+  );
+};
 
-const mockStore = configureStore();
-
-describe("Test for App container", () => {
-  test("should render contains BrowserRouter", () => {
-    const store = mockStore(initialState);
-    const wrapper = shallow(setupComponent(App, { store }));
-    expect(wrapper.find(BrowserRouter)).toHaveLength(1);
+describe("Test for App", () => {
+  test("should render without error", () => {
+    const wrapper = setup();
+    expect(wrapper.exists()).toBe(true);
   });
 });

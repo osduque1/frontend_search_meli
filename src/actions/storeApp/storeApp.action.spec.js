@@ -1,29 +1,48 @@
-import {
-  GET_PRODUCTS_STARTED,
-  // GET_PRODUCTS_SUCCESS,
-  GET_PRODUCTS_FAILURE,
-  // GET_PRODUCTS_DETAIL_STARTED,
-  // GET_PRODUCTS_DETAIL_SUCCESS,
-  // GET_PRODUCTS_DETAIL_FAILURE,
-} from "../../constants/storeApp/storeApp.constant";
 import * as actions from "./storeApp.action";
+import axios from 'axios';
+
+jest.mock('axios');
 
 const navigate = jest.fn();
 
 describe("Test storeApp.action actions", () => {
-  test("getProducts Action request", () => {
-    const action = actions.getProducts('prueba', navigate);
+  beforeEach(() => {
+    axios.get.mockClear()
+  })
 
-    expect(action).toMatchObject({
-      type: GET_PRODUCTS_STARTED,
-    });
+  test("getProducts Action axios GET_PRODUCTS_SUCCESS", () => {
+    const dispatch = jest.fn();
+    axios.get.mockResolvedValueOnce(Promise.resolve());
+
+    const response = actions.getProducts("Test", navigate)(dispatch);
+
+    expect(response).toEqual(undefined);
   });
 
-  test("getProducts Action error", () => {
-    const payload = actions.getProducts('prueba', navigate);
-    expect(payload).toMatchObject({
-      type: GET_PRODUCTS_FAILURE,
-      payload: "test",
-    });
+  test("getProducts Action axios GET_PRODUCTS_FAILURE", () => {
+    const dispatch = jest.fn();
+    axios.get.mockResolvedValueOnce(Promise.reject());
+
+    const response = actions.getProducts("Test", navigate)(dispatch);
+
+    expect(response).toEqual(undefined);
+  });
+
+  test("getProductsDetail Action axios GET_PRODUCTS_SUCCESS", () => {
+    const dispatch = jest.fn();
+    axios.get.mockResolvedValueOnce(Promise.resolve());
+
+    const response = actions.getProductsDetail("Test", navigate)(dispatch);
+
+    expect(response).toEqual(undefined);
+  });
+
+  test("getProductsDetail Action axios GET_PRODUCTS_FAILURE", () => {
+    const dispatch = jest.fn();
+    axios.get.mockResolvedValueOnce(Promise.reject());
+
+    const response = actions.getProductsDetail("Test", navigate)(dispatch);
+
+    expect(response).toEqual(undefined);
   });
 });

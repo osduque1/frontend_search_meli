@@ -11,7 +11,7 @@ import axios from "axios";
 
 export const getProducts = (searchText, navigate) => (dispatch) => {
   const endPoint = `${config.apiEndPoint}/api/items?q=:`;
-  const urlProducts = searchText?.length ? `/items?search=${searchText}` : "";
+  const urlProducts = `/items?search=${searchText}`;
   navigate(urlProducts);
 
   dispatch({

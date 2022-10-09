@@ -23,8 +23,7 @@
     "redux": "^4.2.0",
     "redux-mock-store": "^1.5.4",
     "redux-thunk": "^2.4.1",
-    "sass": "^1.52.2",
-    "web-vitals": "^2.1.0"
+    "sass": "^1.52.2"
   },
   "scripts": {
     "start": "dotenv -e env/dev.env react-scripts start",
