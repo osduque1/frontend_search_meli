@@ -4,5 +4,5 @@ export const formatValueToCurrency = (value) => {
     currency: "COP",
   }).format(value);
 
-  return truncvalue?.split(",")[0] || 0;
+  return truncvalue?.split(",")[0];
 };

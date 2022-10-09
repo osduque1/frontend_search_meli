@@ -3,65 +3,18 @@
         "name": "Oscar",
         "lastname": "Duque"
     },
-    "categories": [
-        "Juegos de Mesa y Cartas",
-        "Muñecos y Muñecas",
-        "Peluches",
-        "Figuritas, Álbumes y Cromos",
-        "Hobbies"
-    ],
-    "items": [
-        {
-            "id": "MLA844892138",
-            "title": "Bolsa Conteniendo 24 Mini Pokémon 2-3 Cm Al Azar Sin Repetir",
-            "price": {
-                "currency": "ARS",
-                "amount": 3799.05,
-                "decimals": 0.05
-            },
-            "picture": "http://http2.mlstatic.com/D_863530-MLA50672955005_072022-I.jpg",
-            "condition": "new",
-            "free_shipping": false,
-            "address": "Vicente López"
+    "item": {
+        "id": "MLA844892138",
+        "title": "Bolsa Conteniendo 24 Mini Pokémon 2-3 Cm Al Azar Sin Repetir",
+        "price": {
+            "currency": "ARS",
+            "amount": 3999,
+            "decimals": 0
         },
-        {
-            "id": "MLA838504614",
-            "title": "Peluches Pokemon Go 20 Cm Varios Modelos Pikachu Pokemones",
-            "price": {
-                "currency": "ARS",
-                "amount": 1989,
-                "decimals": 0
-            },
-            "picture": "http://http2.mlstatic.com/D_668216-MLA48876225229_012022-I.jpg",
-            "condition": "new",
-            "free_shipping": false,
-            "address": "Microcentro"
-        },
-        {
-            "id": "MLA1125661247",
-            "title": "Figuras Set X8 Pokemon Go Pikachu. Coleccionables.",
-            "price": {
-                "currency": "ARS",
-                "amount": 5490,
-                "decimals": 0
-            },
-            "picture": "http://http2.mlstatic.com/D_656812-MLA51200753993_082022-I.jpg",
-            "condition": "new",
-            "free_shipping": false,
-            "address": "Villa Crespo"
-        },
-        {
-            "id": "MLA1129135841",
-            "title": "Peluche Muñeco Pokemon",
-            "price": {
-                "currency": "ARS",
-                "amount": 2699,
-                "decimals": 0
-            },
-            "picture": "http://http2.mlstatic.com/D_986475-MLA50732817710_072022-I.jpg",
-            "condition": "new",
-            "free_shipping": false,
-            "address": "Once"
-        }
-    ]
+        "picture": "http://http2.mlstatic.com/D_863530-MLA50672955005_072022-O.jpg",
+        "condition": "new",
+        "free_shipping": false,
+        "sold_quantity": 290,
+        "description": "Bolsa Conteniendo 24 Mini Pokémon 2-2,5 Cm Al Azar Sin Repetir Viene un Pikachu\n\nMini mini Pokémon Cotillón PVC\n\nPara mayores de 4 años\nCalidad Media\nMarca genérica\nPresentación: bolsa sellada \nSon chiquitos\n\nSe envía 1 bolsa de 24 Pokémon al azar! Tenemos hasta 8 bolsas sin repetir! 192 personajes!\nSi comprás más de 1, te enviamos todas diferentes, hasta 8 unidades!.\n\n\nNo se pueden elegir los personajes\nSon 24 personajes sin repetir elegidos al azar!!!\nSon chiquitos!! Mayores 4 años!!!!\n\nPREGUNTAS FRECUENTES\n\n¿CÓMO SE LLAMA EL LOCAL?\nSomos Mumyland, una tienda virtual sin local a la calle.\n\n¿DONDE ESTAMOS, TIENEN LOCAL A LA CALLE? No contamos con local a La calle, pero si con punto de retiro en Vicente López, cerca de la estación de tren Vicente López línea MITRE.\n\n¿En qué horario se puede retirar por el punto de venta ? \nPodes retirar por nuestro punto de venta\nLunes a viernes de 17:30 a 19hs!\n Sábados de 11 a 15:30hs\nActualmente no tenemos otros horarios\n\n¿HACEN ENVÍOS?\nMoto/Mensajería: Lo enviamos en el día, a cargo del comprador FLEX\nMercado Envíos: Trabajamos con Mercado envíos a todo el pais\n\n¿LOS PRODUCTOS SON NUEVOS? Todos nuestros productos son nuevos y tenemos la mejor calidad, la original!.\n\nNuestras fotos son reales!"
+    }
 }
