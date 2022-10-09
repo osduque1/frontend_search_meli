@@ -1,11 +1,15 @@
-import index from "./index";
+import React from 'react';
+import ReactDOM from 'react-dom';
+import AppProvider from './containers/AppProvider/AppProvider';
 
-describe("Test index.js", () => {
-  it("Should render app without crashing", () => {
-    expect(
-      JSON.stringify(
-        Object.assign({}, index, { _reactInternalInstance: "censored" })
-      )
-    ).toMatchSnapshot();
+jest.mock('react-dom', () => ({ render: jest.fn() }));
+
+describe('Application root', () => {
+  it('should render without crashing', () => {
+    const div = document.createElement('div');
+    div.setAttribute('id', 'root');
+    document.body.appendChild(div);
+    require('./index');
+    expect(ReactDOM.render).toHaveBeenCalledWith(<AppProvider />, div);
   });
 });

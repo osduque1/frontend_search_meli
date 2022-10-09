@@ -1,5 +1,5 @@
 import React from "react";
-import { createRoot } from "react-dom/client";
+import ReactDOM from "react-dom";
 import AppProvider from "./containers/AppProvider/AppProvider";
 import "../src/assets/stylesheets/reset.scss";
 
@@ -13,11 +13,9 @@ if (process.env.NODE_ENV === "production") {
   console.log("%c¡Detente!", warningTitleCSS);
   // eslint-disable-next-line no-console
   console.log(
-    "%cEsta función del navegador está pensada para desarrolladores. Si alguien te ha indicado que copiaras y pegaras algo aquí para 'hackear' la cuenta de alguien, se trata de un fraude. Si lo haces, esta persona podrá acceder a tu cuenta.",
+    "%cEsta función del navegador está pensada para desarrolladores.",
     warningDescCSS
   );
 }
 
-createRoot(
-  document.getElementById("root") || document.createElement("div")
-).render(<AppProvider />);
+ReactDOM.render(<AppProvider />, document.getElementById("root"));
