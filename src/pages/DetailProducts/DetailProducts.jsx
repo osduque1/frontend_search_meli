@@ -88,7 +88,7 @@ CardInfo.defaultProps = {
 };
 
 DetailProducts.propTypes = {
-  productDetail: PropTypes.arrayOf(PropTypes.object).isRequired,
+  productDetail: PropTypes.object.isRequired,
 };
 
 const mapStateToProps = (state) => ({

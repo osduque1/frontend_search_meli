@@ -75,7 +75,7 @@ CardInfo.defaultProps = {
 };
 
 Products.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+  products: PropTypes.object.isRequired,
   getProductsDetail: PropTypes.oneOfType([PropTypes.func]).isRequired,
 };
 
