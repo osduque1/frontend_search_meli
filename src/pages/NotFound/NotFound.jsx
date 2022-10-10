@@ -1,5 +1,5 @@
-import Error from "../../assets/images/error.svg";
 import { useNavigate } from "react-router-dom";
+import Error from "../../assets/images/error.svg";
 import "./NotFound.scss";
 
 const NotFound = () => {

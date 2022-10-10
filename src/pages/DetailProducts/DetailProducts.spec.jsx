@@ -107,7 +107,7 @@ describe("Test for DetailProducts", () => {
 
     expect(cardInfoEmpty).toBe(true);
   });
-  
+
   test("should execute event click Back button", () => {
     const props = {
       storeApp: {

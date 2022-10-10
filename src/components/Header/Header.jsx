@@ -54,6 +54,10 @@ const Header = ({ getProducts }) => {
   );
 };
 
+Header.defaultProps = {
+  getProducts: () => "",
+};
+
 Header.propTypes = {
   getProducts: PropTypes.func.isRequired,
 };

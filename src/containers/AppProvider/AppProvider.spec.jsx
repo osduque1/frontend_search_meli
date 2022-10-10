@@ -1,9 +1,9 @@
 import React from "react";
 import { mount } from "enzyme";
-import AppProvider from "./AppProvider";
+import { Provider } from "react-redux";
 import thunk from "redux-thunk";
 import configureStore from "redux-mock-store";
-import { Provider } from "react-redux";
+import AppProvider from "./AppProvider";
 
 const middlewares = [thunk];
 const mockStore = configureStore(middlewares);

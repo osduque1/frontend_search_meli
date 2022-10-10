@@ -1,14 +1,14 @@
 import * as actions from "./storeApp.action";
-import axios from 'axios';
+import axios from "axios";
 
-jest.mock('axios');
+jest.mock("axios");
 
 const navigate = jest.fn();
 
 describe("Test storeApp.action actions", () => {
   beforeEach(() => {
-    axios.get.mockClear()
-  })
+    axios.get.mockClear();
+  });
 
   test("getProducts Action axios GET_PRODUCTS_SUCCESS", () => {
     const dispatch = jest.fn();

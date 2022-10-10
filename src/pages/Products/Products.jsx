@@ -69,8 +69,14 @@ const Products = ({ products, getProductsDetail }) => {
   );
 };
 
+CardInfo.defaultProps = {
+  products: {},
+  getProductsDetail: () => "",
+};
+
 Products.propTypes = {
-  products: PropTypes.oneOfType([PropTypes.object]).isRequired,
+  products: PropTypes.arrayOf(PropTypes.object).isRequired,
+  getProductsDetail: PropTypes.oneOfType([PropTypes.func]).isRequired,
 };
 
 const mapStateToProps = (state) => ({

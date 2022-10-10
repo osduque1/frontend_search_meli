@@ -3,7 +3,6 @@ const { REACT_APP_ENVIROMENT_URL_MELI, REACT_APP_ENVIROMENT_API_ENDPOINT } =
 
 const environmentConfig = () => {
   return {
-    production: false,
     urlMeli: REACT_APP_ENVIROMENT_URL_MELI,
     apiEndPoint: REACT_APP_ENVIROMENT_API_ENDPOINT,
   };
