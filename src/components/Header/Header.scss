@@ -1,53 +1,53 @@
-@import "../../assets/stylesheets/variables";
+@import '../../assets/stylesheets/variables';
 
 .Header {
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  background-color: $yellow-neutral;
-  border-bottom: 1px solid $neutral-400;
-  width: 100%;
+	display: flex;
+	justify-content: center;
+	padding: 10px;
+	background-color: $yellow-neutral;
+	border-bottom: 1px solid $neutral-400;
+	width: 100%;
 
-  &__Container {
-    display: flex;
-    height: $spacing-xxxl;
-    width: 72.5%;
+	&__Container {
+		display: flex;
+		height: $spacing-xxxl;
+		width: 72%;
 
-    @media (max-width: $width-media-mobile) {
-      width: -webkit-fill-available;
-    }
+		@media (max-width: $width-media-mobile) {
+			width: -webkit-fill-available;
+		}
 
-    img {
-      cursor: pointer;
-      margin-right: 10px;
-    }
+		img {
+			cursor: pointer;
+			margin-right: 10px;
+		}
 
-    input {
-      font-size: 18px;
-      margin-left: 0.5rem;
-      text-overflow: ellipsis;
-    }
+		input {
+			font-size: 18px;
+			margin-left: 0.5rem;
+			text-overflow: ellipsis;
+		}
 
-    input:focus {
-      box-shadow: none !important;
-    }
-  }
+		input:focus {
+			box-shadow: none !important;
+		}
+	}
 
-  &__Search {
-    color: $neutral-700;
-    background-color: $neutral-100;
-    border: $border-transparent;
-    padding: $fs-button-small $fs-button-medium;
-    border: 1px solid #ced4da;
-  }
+	&__Search {
+		color: $neutral-700;
+		background-color: $neutral-100;
+		border: $border-transparent;
+		padding: $fs-button-small $fs-button-medium;
+		border: 1px solid #ced4da;
+	}
 
-  &__Search:hover {
-    color: $neutral-200;
-    background-color: $neutral-700;
-    border: 1px solid #ced4da;
-  }
+	&__Search:hover {
+		color: $neutral-200;
+		background-color: $neutral-700;
+		border: 1px solid #ced4da;
+	}
 
-  &__Search:focus {
-    box-shadow: none;
-  }
+	&__Search:focus {
+		box-shadow: none;
+	}
 }

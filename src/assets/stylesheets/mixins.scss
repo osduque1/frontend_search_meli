@@ -1,47 +1,47 @@
-@import "variables";
+@import 'variables';
 
 @mixin scrollbar {
-  overflow: auto;
+	overflow: auto;
 
-  &::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
-  }
+	&::-webkit-scrollbar {
+		width: 10px;
+		height: 10px;
+	}
 
-  &::-webkit-scrollbar-thumb {
-    background: $blue-ligth;
-    border-radius: 15px;
-  }
+	&::-webkit-scrollbar-thumb {
+		background: $blue-ligth;
+		border-radius: 15px;
+	}
 
-  &::-webkit-scrollbar-thumb:hover {
-    background: $primary-500;
-  }
+	&::-webkit-scrollbar-thumb:hover {
+		background: $primary-500;
+	}
 }
 
 @mixin dynamic-height($flex-direction: row, $scroll: false) {
-  display: flex;
-  flex-direction: $flex-direction;
-  min-height: 0;
+	display: flex;
+	flex-direction: $flex-direction;
+	min-height: 0;
 
-  @if $scroll {
-    @include scrollbar;
-  }
+	@if $scroll {
+		@include scrollbar;
+	}
 }
 
 @mixin svg {
-  animation-name: svg;
-  animation-duration: 1.5s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  @keyframes svg {
-    0% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+	animation-name: svg;
+	animation-duration: 1.5s;
+	animation-timing-function: linear;
+	animation-iteration-count: infinite;
+	@keyframes svg {
+		0% {
+			opacity: 1;
+		}
+		50% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
 }

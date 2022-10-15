@@ -1,35 +1,35 @@
-@import "../../assets/stylesheets/mixins.scss";
+@import '../../assets/stylesheets/mixins.scss';
 
 .CardInfo {
-  height: 80vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+	height: 80vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-  &__Container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: $neutral-000;
-    border: $border-divider;
-    border-radius: 20px;
-    padding: 25px 30px;
-    box-shadow: $shadow-xl;
+	&__Container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: $neutral-000;
+		border: $border-divider;
+		border-radius: 20px;
+		padding: 25px 30px;
+		box-shadow: $shadow-xl;
 
-    svg {
-      @include svg;
-    }
+		svg {
+			@include svg;
+		}
 
-    h2 {
-      font-size: $fs-h5;
-      font-weight: bold;
-      margin: 10px;
-      text-align: center;
-    }
+		h2 {
+			font-size: $fs-h5;
+			font-weight: bold;
+			margin: 10px;
+			text-align: center;
+		}
 
-    p {
-      font-size: $fs-h6;
-      margin: 10px;
-    }
-  }
+		p {
+			font-size: $fs-h6;
+			margin: 10px;
+		}
+	}
 }
