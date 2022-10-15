@@ -1,5 +1,5 @@
 // Variables
-@import "variables";
+@import 'variables';
 
 // Styles default reset START
 html,
@@ -65,51 +65,51 @@ tr,
 th,
 td,
 input {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent;
-  font-family: $ff-FSJoey-Bold;
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	font-family: $ff-FSJoey-Bold;
 }
 
 body {
-  line-height: 1;
+	line-height: 1;
 }
 
 ol,
 ul {
-  list-style: none;
+	list-style: none;
 }
 
 blockquote,
 q {
-  quotes: none;
+	quotes: none;
 }
 
 blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
-  content: none;
+	content: '';
+	content: none;
 }
 
 :focus {
-  outline: 0;
+	outline: 0;
 }
 
 ins {
-  text-decoration: none;
+	text-decoration: none;
 }
 del {
-  text-decoration: line-through;
+	text-decoration: line-through;
 }
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0;
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 // Styles default reset END

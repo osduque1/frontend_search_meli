@@ -1,24 +1,24 @@
-@import "../../assets/stylesheets/variables";
+@import '../../assets/stylesheets/variables';
 
 .Breadcrumbs {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 16px 0;
-  font-size: 14px;
-  color: $gray-color-200;
-  width: 71%;
+	display: flex;
+	flex-wrap: wrap;
+	margin: 16px 0;
+	font-size: 14px;
+	color: $gray-color-200;
+	width: 71%;
 
-  @media (max-width: $width-media-mobile) {
-    width: fit-content;
-    margin: 16px 8px;
-    font-size: 12px;
-  }
+	@media (max-width: $width-media-mobile) {
+		width: fit-content;
+		margin: 16px 8px;
+		font-size: 12px;
+	}
 
-  li {
-    padding: 5px 5px 0;
-  }
+	li {
+		padding: 5px 5px 0;
+	}
 
-  li:last-child {
-    font-weight: bold;
-  }
+	li:last-child {
+		font-weight: bold;
+	}
 }
